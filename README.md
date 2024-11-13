@@ -44,7 +44,7 @@
 
 ![1-try](./res/ugly-shit.jpg)
 
-Схема:
+Другий етап:
 
 ![2-try](./res/not-so-ugly-shit.jpg)
 
