@@ -38,23 +38,32 @@ def move_sheeps():
         d = sqrt(dx ** 2 + dy ** 2)
 
         if d > 70:
-          speed[0] -= dx * 0.001
-          speed[1] -= dy * 0.001
+          speed[0] -= dx * 0.0001
+          speed[1] -= dy * 0.0001
         if d < 30:
-          speed[0] += dx * 0.1
-          speed[1] += dy * 0.1
+          speed[0] += dx * 0.01
+          speed[1] += dy * 0.01
 
   # Contact with mouse
   for sheep in sheeps:
-    ...
+    pos = sheep[0]
+    speed = sheep[1]
+
+    dx = pos[0] - mouse_x
+    dy = pos[1] - mouse_y
+    d = sqrt(dx ** 2 + dy ** 2)
+
+    if d < 50:
+      speed[0] += dx * 0.02
+      speed[1] += dy * 0.02
 
   # Move sheeps
   for sheep in sheeps:
     pos = sheep[0]
     speed = sheep[1]
         
-    speed[0] *= 0.1
-    speed[1] *= 0.1
+    speed[0] *= 0.9
+    speed[1] *= 0.9
 
     pos[0] += speed[0]
     pos[1] += speed[1]
